@@ -1,21 +1,23 @@
 Summary:	bh-lucidatypewriter-75dpi font
 Summary(pl):	Font bh-lucidatypewriter-75dpi
 Name:		xorg-font-font-bh-lucidatypewriter-75dpi
-Version:	0.99.0
-Release:	0.01
+Version:	0.99.2
+Release:	0.1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/font/font-bh-lucidatypewriter-75dpi-%{version}.tar.bz2
-# Source0-md5:	4e6132f4fa8e692dc9f6b12754babee5
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-bh-lucidatypewriter-75dpi-%{version}.tar.bz2
+# Source0-md5:	393ce49f816c0de2c924f3e97acf0c2d
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
-BuildRequires:	xorg-font-font-util
+BuildRequires:	xorg-font-font-util >= 0.99.2
 BuildRequires:	xorg-util-util-macros
+Requires(post,postun):	fontpostinst
+Requires:	%{_fontsdir}/75dpi
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,7 +33,8 @@ Font bh-lucidatypewriter-75dpi.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--with-fontdir=%{_fontsdir}/75dpi
 
 %{__make}
 
@@ -44,6 +47,13 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+fontpostinst 75dpi
+
+%postun
+fontpostinst 75dpi
+
 %files
 %defattr(644,root,root,755)
-%{_libdir}/X11/fonts/75dpi/*
+%doc COPYING ChangeLog
+%{_fontsdir}/75dpi/*.pcf.gz
