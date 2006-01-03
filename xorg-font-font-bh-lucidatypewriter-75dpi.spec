@@ -1,12 +1,12 @@
 Summary:	bh-lucidatypewriter-75dpi font
 Summary(pl):	Font bh-lucidatypewriter-75dpi
 Name:		xorg-font-font-bh-lucidatypewriter-75dpi
-Version:	0.99.2
+Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-bh-lucidatypewriter-75dpi-%{version}.tar.bz2
-# Source0-md5:	393ce49f816c0de2c924f3e97acf0c2d
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/font/font-bh-lucidatypewriter-75dpi-%{version}.tar.bz2
+# Source0-md5:	fdd9be5b9db94ef363a33e39b7977e2b
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
