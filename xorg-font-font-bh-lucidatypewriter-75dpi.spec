@@ -1,5 +1,5 @@
 Summary:	bh-lucidatypewriter-75dpi font
-Summary(pl):	Font bh-lucidatypewriter-75dpi
+Summary(pl.UTF-8):   Font bh-lucidatypewriter-75dpi
 Name:		xorg-font-font-bh-lucidatypewriter-75dpi
 Version:	1.0.0
 Release:	0.1
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 bh-lucidatypewriter-75dpi font.
 
-%description -l pl
+%description -l pl.UTF-8
 Font bh-lucidatypewriter-75dpi.
 
 %prep
