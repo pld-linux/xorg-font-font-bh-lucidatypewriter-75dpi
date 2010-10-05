@@ -1,12 +1,12 @@
 Summary:	Bigelow & Holmes Lucida Typewriter 75dpi bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe 75dpi Bigelow & Holmes Lucida Typewriter
 Name:		xorg-font-font-bh-lucidatypewriter-75dpi
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	MIT
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-bh-lucidatypewriter-75dpi-%{version}.tar.bz2
-# Source0-md5:	6397062f2b346ce5bbe5472f3353a9a9
+# Source0-md5:	c500d809e60b0139bf6b4bce6550372a
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
